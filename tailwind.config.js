@@ -7,6 +7,8 @@ export default {
     extend: {
       colors: {
         'dark-custom': '#060606',
+        'gray-icons': '#676767',
+        'gray-dark': '#0d0c0d',
       },
       height: {
         '18': '4.5rem',

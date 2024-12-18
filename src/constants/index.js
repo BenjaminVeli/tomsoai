@@ -1,9 +1,6 @@
 export const navLinks = [
-    { id: 1, to: "hero", name: "inicio" },
-    { id: 2, to: "inicio", name: "inicio" },
-    { id: 3, to: "inicio", name: "inicio" },
-    { id: 4, to: "inicio", name: "inicio" },
-    { id: 5, to: "inicio", name: "inicio" },
+    { id: 1, to: "hero", name: "start" },
+    { id: 2, to: "expectation", name: "expectation" },
 ];
 
 export const involvedCompanies = [
