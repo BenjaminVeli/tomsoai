@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background: #060606;
+}
+
+.header-lower {
+  position: relative; /* Necesario para que el pseudo-elemento se posicione correctamente */
+}
+
+.header-lower::after {
+  content: ""; /* Obligatorio para pseudo-elementos */
+  position: absolute;
+  bottom: 0; /* Alinea el pseudo-elemento al borde inferior */
+  left: 0;
+  width: 100%; /* Ocupa el ancho completo */
+  height: 1px; /* Altura del "borde" */
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgb(43, 42, 42) 52.07%, rgba(255, 255, 255, 0) 100%);
+}
+
+.text-ai {
+  background: linear-gradient(50deg, rgb(113, 77, 255), rgb(156, 131, 255) 31.28%, rgb(225, 81, 255) 77.97%, rgb(255, 247, 89) 95.64%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* --------------------- Styles of Tailwind --------------------- */
+
+@layer utilities {
+    .nav-ul {
+        @apply flex flex-col items-center gap-6 sm:flex-row md:gap-10 relative z-20;
+      }
+      
+      .nav-li {
+        @apply text-white hover:text-opacity-70 duration-500 font-normal text-base;
+      }
+      
+      .nav-sidebar {
+        @apply absolute left-0 right-0 top-[4rem] bg-black backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block;
+      }
+    
+}
+
+
