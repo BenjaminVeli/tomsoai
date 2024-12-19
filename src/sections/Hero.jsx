@@ -3,7 +3,7 @@ import { BsArrowDown } from "react-icons/bs";
 
 const Hero = () => {
   return (
-    <section id="hero" className="" style={{backgroundImage: 'url(/assets/img/stars.png)'}} >
+    <section id="hero" style={{backgroundImage: 'url(/assets/img/stars.png)'}} >
       <div className="container relative">
         <div className="min-h-[70vh] flex items-center">
           <div className="relative z-10 text-center mx-auto lg:max-w-4xl">
@@ -16,7 +16,7 @@ const Hero = () => {
             <div className="mb-2">
               <Link to="involved" smooth={true} duration={500} className="bg-white rounded-lg transition-all duration-300 hover:bg-gray-300 inline-block py-2 px-4 text-black text-base cursor-pointer">
                 <div className="flex items-center">
-                  <span>Get Start</span>
+                  <span>Get Started</span>
                   <BsArrowDown className="h-3 w-3 text-black ml-2" />
                 </div>
               </Link>

@@ -3,8 +3,10 @@ import Footer from "./components/Footer";
 
 import Hero from "./sections/Hero";
 import Involved from "./sections/Involved";
-import Expectation from "./sections/Expectation";
 import Features from "./sections/Features";
+import Price from "./sections/Pricing";
+import Expectation from "./sections/Expectation";
+import CallToAction from "./sections/CallToAction";
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
       <main>
         <Involved />
         <Features />
+        <Price />
         <Expectation />
+        <CallToAction />
       </main>
       
       <Footer />
