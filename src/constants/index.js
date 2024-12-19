@@ -1,6 +1,7 @@
 export const navLinks = [
     { id: 1, to: "hero", name: "start" },
-    { id: 2, to: "expectation", name: "expectation" },
+    { id: 2, to: "features", name: "features" },
+    { id: 3, to: "expectation", name: "expectation" },
 ];
 
 export const involvedCompanies = [

@@ -10,32 +10,32 @@ const toolkit = [
   {
     Icon: FaCloud,
     label: "Cloud",
-    title: "title",
-    description: "description description descriptiondescription",
+    title: "Cloud Computing",
+    description: "Innovative cloud solutions for scalable AI",
   },
   {
     Icon: RiTailwindCssFill,
     label: "Tailwind",
-    title: "title",
-    description: "description description descriptiondescription",
+    title: "Tailwind CSS",
+    description: "Custom UI design with utility-first approach",
   },
   {
     Icon: BsRocketFill,
     label: "Rocket",
-    title: "title",
-    description: "description description descriptiondescription",
+    title: "Rocket Launch",
+    description: "Boost your AI capabilities with speed",
   },
   {
     Icon: SiArchlinux,
     label: "arch",
-    title: "title",
-    description: "description description descriptiondescription",
+    title: "Linux Environment",
+    description: "Developed and optimized in a Linux setup",
   },
   {
     Icon: FaFileCode,
     label: "Code",
-    title: "title",
-    description: "description description descriptiondescription",
+    title: "AI Code Generation",
+    description: "Generating unique coding styles for projects",
   },
 ];
 
@@ -77,15 +77,15 @@ const Expectation = () => {
                 <div className="flex items-center py-4 md:py-8">
                   <div className="md:w-[130px] md:h-[130px] w-[100px] h-[100px]">
                     <tool.Icon
-                      className="text-gray-icons px-5 w-full h-full"
+                      className="text-gray-icons px-5 md:size-[130px] size-[100px]"
                       aria-label={tool.label}
                     />
                   </div>
-                  <div className="flex flex-col pr-2.5 sm:pr-4 lg:pr-10">
-                    <h3 className="text-indigo-600 font-medium text-base md:text-lg">
+                  <div className="flex flex-col pr-2.5 sm:pr-4 lg:pr-10 lg:pl-6 sm:pl-2 pl-1">
+                    <h3 className="text-indigo-500 font-medium text-base md:text-lg">
                       {tool.title}
                     </h3>
-                    <p className="text-lg md:text-xl text-white">
+                    <p className="text-lg md:text-xl text-white [text-wrap:balance] leading-6 lg:leading-[27px]">
                       {tool.description}
                     </p>
                   </div>

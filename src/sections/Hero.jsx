@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import { BsArrowDown } from "react-icons/bs";
 
 const Hero = () => {
@@ -13,12 +14,12 @@ const Hero = () => {
               The best AI for generating custom coding styles with Tailwind CSS.
             </h2>
             <div className="mb-2">
-              <a href="#contact" className="bg-white rounded-lg transition-all duration-300 hover:bg-gray-300 inline-block py-2 px-4 text-black text-base">
+              <Link to="involved" smooth={true} duration={500} className="bg-white rounded-lg transition-all duration-300 hover:bg-gray-300 inline-block py-2 px-4 text-black text-base cursor-pointer">
                 <div className="flex items-center">
-                  <span>Contáctenos</span>
+                  <span>Get Start</span>
                   <BsArrowDown className="h-3 w-3 text-black ml-2" />
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

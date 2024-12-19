@@ -8,8 +8,8 @@ const Involved = () => {
   return (
     <section id="involved" className="py-20 md:py-24">
       <div className="container">
-        <h2 className="text-neutral-400 text-lg text-center mb-12 cursor-pointer">
-          Information about those<span className="text-white block sm:inline"> involved in this AI</span>
+        <h2 className="text-neutral-400 text-xl text-center mb-12">
+          Involved<span className="text-white inline"> in this AI</span>
         </h2>
 
         <div className="flex justify-center items-center overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
