@@ -15,7 +15,7 @@ const CallToAction = () => {
           ></div>
           <Reveal>
           <div className="relative">
-            <h2 className="text-5xl md:text-6xl max-w-md mx-auto tracking-tighter text-center font-medium text-white">
+            <h2 className="text-5xl md:text-6xl md:max-w-md max-w-xs mx-auto tracking-tighter text-center font-medium text-white">
               AI-driven STYLE for everyone.
             </h2>
             <p className="text-center text-lg md:text-xl max-w-xs mx-auto text-white/70 px-4 mt-5 tracking-tight">

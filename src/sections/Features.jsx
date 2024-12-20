@@ -64,7 +64,8 @@ const FeatureTab = (tab) => {
   };
 
   return (
-    <div
+    <Reveal>
+      <div
       onMouseEnter={handleTabHover}
       className="border border-white/15 flex p-2.5 rounded-xl gap-2.5 items-center text-white lg:flex-1 relative"
     >
@@ -89,6 +90,8 @@ const FeatureTab = (tab) => {
         </div>
       )}
     </div>
+    </Reveal>
+    
   );
 };
 

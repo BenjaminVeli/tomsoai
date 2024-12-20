@@ -30,7 +30,7 @@ const App = () => {
     <>
       <div id="preloader">
         <div className="loader">
-          <span className="loader--blue">Tomso</span>
+          <span className="loader--blue">Tomso ai</span>
         </div>
       </div>
 

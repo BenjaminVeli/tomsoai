@@ -9,7 +9,7 @@ const data = [
     descriptionClasses: "",
     price: "0",
     features: [
-      "Generate up to 10 custom styles per month",
+      "Generate ten unique styles monthly",
       "Access to basic Tailwind CSS templates",
       "Community support",
       "Basic customization options",
@@ -67,44 +67,46 @@ const Price = () => {
           </h2>
         </Reveal>
 
-        <div className="flex flex-col justify-center md:flex-row gap-8 md:gap-0 items-center">
-          {data.map((plan, index) => (
-            <div
-              key={index}
-              className={`p-6 border cursor-pointer transition-all duration-300 rounded-xl ${plan.height} ${plan.borderClasses} ${plan.extraClasses}`}
-            >
-              <h3 className={` ${plan.titleClasses}`}>
-                {plan.title}
-                <span className={` ${plan.descriptionClasses}`}>
-                  {plan.description}
-                </span>
-              </h3>
-              <p className="text-xl text-white">
-                ${plan.price} <span className="text-lg">{" / "}month</span>
-              </p>
-              <div className={` ${plan.featuresClasses}`}>
-                <ul className="inline-flex flex-col gap-2 text-left text-neutral-400">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-2">
-                      <FaCheck />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+        <Reveal>
+          <div className="flex flex-col justify-center md:flex-row gap-8 md:gap-0 items-center">
+            {data.map((plan, index) => (
+              <div
+                key={index}
+                className={`p-6 border cursor-pointer transition-all duration-300 rounded-xl ${plan.height} ${plan.borderClasses} ${plan.extraClasses}`}
+              >
+                <h3 className={` ${plan.titleClasses}`}>
+                  {plan.title}
+                  <span className={` ${plan.descriptionClasses}`}>
+                    {plan.description}
+                  </span>
+                </h3>
+                <p className="text-xl text-white">
+                  ${plan.price} <span className="text-lg">{" / "}month</span>
+                </p>
+                <div className={` ${plan.featuresClasses}`}>
+                  <ul className="inline-flex flex-col gap-2 text-left text-neutral-400">
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
+                        <FaCheck />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="flex justify-center">
+                  <button className="relative py-2 px-3 rounded-lg font-medium text-sm bg-gradient-to-b from-[#190d2e] text-white to-[#4a208a] shadow-[0px_0px_12px_#8c45ff] cursor-pointer">
+                    <div className="absolute inset-0">
+                      <div className="rounded-lg border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]"></div>
+                      <div className="rounded-lg border absolute inset-0 border-white/40 [mask-image:linear-gradient(to_top,black,transparent)]"></div>
+                      <div className="absolute inset-0 show-[0_0_10px_rgb(140,69,255,.7)_inset] rounded-lg"></div>
+                    </div>
+                    <span>Subscribe to {plan.title}</span>
+                  </button>
+                </div>
               </div>
-              <div className="flex justify-center">
-                <button className="relative py-2 px-3 rounded-lg font-medium text-sm bg-gradient-to-b from-[#190d2e] text-white to-[#4a208a] shadow-[0px_0px_12px_#8c45ff] cursor-pointer">
-                  <div className="absolute inset-0">
-                    <div className="rounded-lg border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]"></div>
-                    <div className="rounded-lg border absolute inset-0 border-white/40 [mask-image:linear-gradient(to_top,black,transparent)]"></div>
-                    <div className="absolute inset-0 show-[0_0_10px_rgb(140,69,255,.7)_inset] rounded-lg"></div>
-                  </div>
-                  <span>Subscribe to {plan.title}</span>
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   );
