@@ -33,31 +33,15 @@ const Header = () => {
       <div className="header-lower">
         <div className="container">
           <div className="flex justify-between items-center h-16 lg:h-18">
-            <Link href="/" className="text-white font-normal text-xl">
+            <Link to="/" className="text-white font-normal text-xl">
               Tomso
             </Link>
-
-            <nav className="lg:flex hidden">
-              <NavItems />
-            </nav>
-
-            <button
-              onClick={toggleMenu}
-              className="lg:invisible flex"
-              alt="Toggle menu"
-            >
-              {isOpen ? (
-                <BiX className="h-6 w-6 text-white" />
-              ) : (
-                <HiOutlineMenuAlt3 className="h-6 w-6 text-white" />
-              )}
-            </button>
-          </div>
-
-          <div className={`nav-sidebar ${isOpen ? "max-h-screen" : "max-h-0"}`}>
-            <nav className="p-5">
+            <nav>
               <NavItems onClick={closeMenu} />
             </nav>
+            <button onClick={toggleMenu} className="text-white">
+              {isOpen ? <BiX size={24} /> : <HiOutlineMenuAlt3 size={24} />}
+            </button>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -27,7 +28,7 @@ const App = () => {
   }, []);
 
   return (
-    <>
+    <Router>
       <div id="preloader">
         <div className="loader">
           <span className="loader--blue">Tomso ai</span>
@@ -35,22 +36,30 @@ const App = () => {
       </div>
 
       {!loading && (
-      <>
-        <Header />
-        <Hero />
-
-        <main>
-          <Involved />
-          <Features />
-          <Price />
-          <Expectation />
-          <CallToAction />
-        </main>
-
-        <Footer />
-      </>
+        <>
+          <Header />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Hero />
+                  <main>
+                    <Involved />
+                    <Features />
+                    <Price />
+                    <Expectation />
+                    <CallToAction />
+                  </main>
+                </>
+              }
+            />
+            {/* Puedes agregar más rutas aquí si es necesario */}
+          </Routes>
+          <Footer />
+        </>
       )}
-    </>
+    </Router>
   );
 }
 
