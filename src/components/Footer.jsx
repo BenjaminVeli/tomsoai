@@ -18,6 +18,7 @@ const Footer = () => {
               <Link to="hero" className="hover:text-white transition-all duration-300 cursor-pointer" smooth={true} duration={500}>Start</Link>
               <Link to="involved" className="hover:text-white transition-all duration-300 cursor-pointer" smooth={true} duration={500}>Involved</Link>
               <Link to="features" className="hover:text-white transition-all duration-300 cursor-pointer" smooth={true} duration={500}>Features</Link>
+              <Link to="pricing" className="hover:text-white transition-all duration-300 cursor-pointer" smooth={true} duration={500}>Pricing</Link>
               <Link to="expectation" className="hover:text-white transition-all duration-300 cursor-pointer" smooth={true} duration={500}>Expectation</Link>
             </nav>
             <div className="flex gap-5 items-center">

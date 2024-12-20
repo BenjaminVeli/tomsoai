@@ -9,9 +9,14 @@ export default {
         'dark-custom': '#060606',
         'gray-icons': '#676767',
         'gray-dark': '#0d0c0d',
+        'green-neon': 'rgb(16 163 127)',
+        'greenh-neon': 'rgb(20 200 156)',
+        'greenbg-neon': 'rgb(16 163 127)',
       },
       height: {
         '18': '4.5rem',
+        '100': '25rem',
+        '105': '26.25rem',
       }
     },
     screens: {
