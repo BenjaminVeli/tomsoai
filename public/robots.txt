@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 
+# Example: If you want to disallow crawling of a specific file or directory
 Disallow: /src/constants/
 Disallow: /src/utils/
 
