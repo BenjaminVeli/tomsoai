@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import { Link } from "react-router-dom";
 import { navLinks } from "../constants/index.js";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { BiX } from "react-icons/bi";
@@ -8,7 +9,7 @@ const NavItems = ({ onClick }) => (
   <ul className="nav-ul group">
     {navLinks.map(({ id, to, name }) => (
       <li key={id} className="nav-li">
-        <Link
+        <ScrollLink
           to={to}
           smooth={true}
           className="cursor-pointer"
@@ -16,7 +17,7 @@ const NavItems = ({ onClick }) => (
           onClick={onClick}
         >
           {name}
-        </Link>
+        </ScrollLink>
       </li>
     ))}
   </ul>
@@ -32,9 +33,9 @@ const Header = () => {
       <div className="header-lower">
         <div className="container">
           <div className="flex justify-between items-center h-16 lg:h-18">
-            <a href="#" className="text-white font-normal text-xl">
+            <Link href="/" className="text-white font-normal text-xl">
               Tomso
-            </a>
+            </Link>
 
             <nav className="lg:flex hidden">
               <NavItems />
