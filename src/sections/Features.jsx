@@ -1,9 +1,13 @@
-import {
-  DotLottiePlayer,
-} from "@dotlottie/react-player";
+import { DotLottiePlayer } from "@dotlottie/react-player";
 import ProductImage from "/assets/img/product-image.png";
 import { useEffect, useRef } from "react";
-import { animate, motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import {
+  animate,
+  motion,
+  useMotionTemplate,
+  useMotionValue,
+} from "framer-motion";
+import { Reveal } from "../utils/Reveal";
 
 const tabs = [
   {
@@ -50,7 +54,7 @@ const FeatureTab = (tab) => {
 
     animate(xPercentage, [0, 100, 100, 0, 0], options);
     animate(yPercentage, [0, 0, 100, 100, 0], options);
-  }, []);
+  }, );
 
   const handleTabHover = () => {
     if (dotLottieRef.current) {
@@ -64,9 +68,12 @@ const FeatureTab = (tab) => {
       onMouseEnter={handleTabHover}
       className="border border-white/15 flex p-2.5 rounded-xl gap-2.5 items-center text-white lg:flex-1 relative"
     >
-      <motion.div style={{
-        maskImage: maskImage,
-      }} className="absolute inset-0 -m-px border border-[#A369FF] rounded-xl"></motion.div>
+      <motion.div
+        style={{
+          maskImage: maskImage,
+        }}
+        className="absolute inset-0 -m-px border border-[#A369FF] rounded-xl"
+      ></motion.div>
       <div className="h-12 w-12 border border-white/15 rounded-lg inline-flex items-center justify-center">
         <DotLottiePlayer
           ref={dotLottieRef}
@@ -89,13 +96,20 @@ const Features = () => {
   return (
     <section id="features" className="py-20 md:py-24">
       <div className="container">
-        <h2 className="text-4xl md:text-5xl text-center tracking-tighter font-medium text-white mb-5">
-          Elevate your Styles
-        </h2>
-        <p className="text-white/70 text-base md:text-xl text-center tracking-tight [text-wrap:balance] max-w-xl mx-auto">
-          From small startups to large enterprises, our AI-driven tool has
-          revolutionized the way businesses elevate their styles in web design.
-        </p>
+        <Reveal>
+          <h2 className="text-4xl md:text-5xl text-center tracking-tighter font-medium text-white mb-5">
+            Elevate your Styles
+          </h2>
+        </Reveal>
+
+        <Reveal>
+          <p className="text-white/70 text-base md:text-xl text-center tracking-tight [text-wrap:balance] max-w-xl mx-auto">
+            From small startups to large enterprises, our AI-driven tool has
+            revolutionized the way businesses elevate their styles in web
+            design.
+          </p>
+        </Reveal>
+
         <div className="mt-10 flex flex-col lg:flex-row gap-3">
           {tabs.map((tab) => (
             <FeatureTab {...tab} key={tab.title} />

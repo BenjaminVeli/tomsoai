@@ -6,6 +6,55 @@ body{
   background: #060606;
 }
 
+/* ---------------- Preloader ----------------*/
+
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #060606;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loader span {
+  font-size: 30px;
+  animation: blink 2.5s infinite;
+  text-transform: uppercase;
+  letter-spacing: 12px;
+}
+
+.loader--blue{
+  color: #ffffff;
+  padding: 0 5px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 1.5s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+/* ------------------------------------------------*/
+
+
 .header-lower {
   position: relative; /* Necesario para que el pseudo-elemento se posicione correctamente */
 }

@@ -1,4 +1,5 @@
 import { FaCheck } from "react-icons/fa";
+import { Reveal } from "../utils/Reveal";
 
 const data = [
   {
@@ -60,9 +61,12 @@ const Price = () => {
   return (
     <section id="pricing" className="py-20 md:py-24">
       <div className="container">
-        <h2 className="text-4xl md:text-5xl text-center tracking-tighter font-medium text-white mb-10">
-          Pricing
-        </h2>
+        <Reveal>
+          <h2 className="text-4xl md:text-5xl text-center tracking-tighter font-medium text-white mb-10">
+            Pricing
+          </h2>
+        </Reveal>
+
         <div className="flex flex-col justify-center md:flex-row gap-8 md:gap-0 items-center">
           {data.map((plan, index) => (
             <div

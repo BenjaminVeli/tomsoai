@@ -5,6 +5,7 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { BsRocketFill } from "react-icons/bs";
 import { SiArchlinux } from "react-icons/si";
 import { FaFileCode } from "react-icons/fa6";
+import { Reveal } from "../utils/Reveal";
 
 const toolkit = [
   {
@@ -46,13 +47,17 @@ const Expectation = () => {
   return (
     <section id="expectation" className="py-20 md:py-24">
       <div className="container">
-        <h2 className="text-4xl md:text-5xl text-center tracking-tighter font-medium text-white mb-5">
-          Beyond Expectations
-        </h2>
-        <p className="text-white/70 text-base md:text-xl text-center tracking-tight [text-wrap:balance] max-w-xl mx-auto">
-          Our cutting-edge Tomso AI tools redefine design strategies, empowering
-          our clients to innovate like never before.
-        </p>
+        <Reveal>
+          <h2 className="text-4xl md:text-5xl text-center tracking-tighter font-medium text-white mb-5">
+            Beyond Expectations
+          </h2>
+        </Reveal>
+        <Reveal>
+          <p className="text-white/70 text-base md:text-xl text-center tracking-tight [text-wrap:balance] max-w-xl mx-auto">
+            Our cutting-edge Tomso AI tools redefine design strategies,
+            empowering our clients to innovate like never before.
+          </p>
+        </Reveal>
 
         <div className="flex overflow-hidden mt-10 [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
           <motion.div
