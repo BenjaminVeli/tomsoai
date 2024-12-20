@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Ejemplo si quieres que no rastren un archivo o carpeta
+Disallow: /src/constants/
+Disallow: /src/utils/
