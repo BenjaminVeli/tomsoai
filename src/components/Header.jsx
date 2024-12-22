@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link as ScrollLink } from "react-scroll";
 import { Link } from "react-router-dom";
 import { navLinks } from "../constants/index.js";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
@@ -7,17 +6,25 @@ import { BiX } from "react-icons/bi";
 
 const NavItems = ({ onClick }) => (
   <ul className="nav-ul group">
-    {navLinks.map(({ id, to, name }) => (
+    {navLinks.map(({ id, href, name }) => (
       <li key={id} className="nav-li">
-        <ScrollLink
-          to={to}
-          smooth={true}
+        <a
+          href={href}
           className="cursor-pointer"
-          duration={500}
-          onClick={onClick}
+          onClick={(e) => {
+            e.preventDefault();
+            const targetSection = document.getElementById(href.substring(1)); // remove '#' from href
+            if (targetSection) {
+              targetSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start", // "start", "center", "end"
+              });
+            }
+            onClick();
+          }}
         >
           {name}
-        </ScrollLink>
+        </a>
       </li>
     ))}
   </ul>
@@ -36,12 +43,28 @@ const Header = () => {
             <Link to="/" className="text-white font-normal text-xl">
               Tomso
             </Link>
-            <nav>
+
+            <nav className="lg:flex hidden">
+              <NavItems />
+            </nav>
+
+            <button
+              onClick={toggleMenu}
+              className="lg:invisible flex"
+              alt="Toggle menu"
+            >
+              {isOpen ? (
+                <BiX className="h-6 w-6 text-white" />
+              ) : (
+                <HiOutlineMenuAlt3 className="h-6 w-6 text-white" />
+              )}
+            </button>
+          </div>
+
+          <div className={`nav-sidebar ${isOpen ? "max-h-screen" : "max-h-0"}`}>
+            <nav className="p-5">
               <NavItems onClick={closeMenu} />
             </nav>
-            <button onClick={toggleMenu} className="text-white">
-              {isOpen ? <BiX size={24} /> : <HiOutlineMenuAlt3 size={24} />}
-            </button>
           </div>
         </div>
       </div>

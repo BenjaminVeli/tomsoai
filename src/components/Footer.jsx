@@ -2,7 +2,6 @@ import { RiInstagramFill } from "react-icons/ri";
 import { RiTwitterXFill } from "react-icons/ri";
 import { RiFacebookBoxFill } from "react-icons/ri";
 import Logo from "/assets/img/logo.svg";
-import { Link } from "react-scroll";
 
 const Footer = () => {
   return (
@@ -15,11 +14,11 @@ const Footer = () => {
               <div className="font-medium">AI Startup Landing Page</div>
             </div>
             <nav className="flex flex-col lg:flex-row gap-5 lg:gap-7 justify-center text-center">
-              <Link to="hero" className="hover:text-white transition-all duration-300 cursor-pointer" smooth={true} duration={500}>Start</Link>
-              <Link to="involved" className="hover:text-white transition-all duration-300 cursor-pointer" smooth={true} duration={500}>Involved</Link>
-              <Link to="features" className="hover:text-white transition-all duration-300 cursor-pointer" smooth={true} duration={500}>Features</Link>
-              <Link to="pricing" className="hover:text-white transition-all duration-300 cursor-pointer" smooth={true} duration={500}>Pricing</Link>
-              <Link to="expectation" className="hover:text-white transition-all duration-300 cursor-pointer" smooth={true} duration={500}>Expectation</Link>
+              <a href="#hero" className="hover:text-white transition-all duration-300 cursor-pointer">Start</a>
+              <a href="#involved" className="hover:text-white transition-all duration-300 cursor-pointer">Involved</a>
+              <a href="#features" className="hover:text-white transition-all duration-300 cursor-pointer">Features</a>
+              <a href="#pricing" className="hover:text-white transition-all duration-300 cursor-pointer" >Pricing</a>
+              <a href="#expectation" className="hover:text-white transition-all duration-300 cursor-pointer">Expectation</a>
             </nav>
             <div className="flex gap-5 items-center">
               <RiTwitterXFill className="hover:text-white transition-all duration-300 cursor-pointer" size={24}/>

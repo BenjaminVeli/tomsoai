@@ -1,4 +1,3 @@
-import { Link } from "react-scroll";
 import { BsArrowDown } from "react-icons/bs";
 import { Reveal } from "../utils/Reveal";
 
@@ -23,17 +22,15 @@ const Hero = () => {
               </h2>
             </Reveal>
             <div className="mb-2">
-              <Link
-                to="involved"
-                smooth={true}
-                duration={500}
+              <a
+                href="#involved"
                 className="bg-white rounded-lg transition-all duration-300 hover:bg-gray-300 inline-block py-2 px-4 text-black text-base cursor-pointer"
               >
                 <div className="flex items-center">
                   <span>Get Started</span>
                   <BsArrowDown className="h-3 w-3 text-black ml-2" />
                 </div>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
